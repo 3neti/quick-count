@@ -14,6 +14,11 @@ class Poll extends Model
         return $this->belongsTo(Contact::class);
     }
 
+    public function station()
+    {
+        return $this->belongsTo(Station::class);
+    }
+
     public function pollItems()
     {
         return $this->hasMany(PollItem::class);

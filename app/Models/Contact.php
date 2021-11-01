@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Contact extends BaseContact
 {
     use HasFactory;
+
+    public function station()
+    {
+        return $this->belongsTo(Station::class);
+    }
 }

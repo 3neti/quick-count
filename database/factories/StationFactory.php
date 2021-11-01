@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CandidateFactory extends Factory
+class StationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class CandidateFactory extends Factory
     public function definition()
     {
         return [
-            'code' => $this->faker->word(),
-            'name' => $this->faker->name(),
+            'cluster' => $this->faker->numerify('######')
         ];
     }
 }

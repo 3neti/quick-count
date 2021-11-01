@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Contact;
+use App\Models\{Contact, Station};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContactFactory extends Factory
@@ -22,7 +22,8 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
-            'mobile' => $this->faker->phoneNumber
+            'mobile' => $this->faker->phoneNumber(),
+            'station_id' => Station::factory()->create()->id,
         ];
     }
 }

@@ -12,7 +12,7 @@ class PollItemTest extends TestCase
     use RefreshDatabase, WithFaker;
 
     /** @test */
-    public function poll_item_has_candidate_and_votes()
+    public function poll_item_has_votes_and_belongs_to_a_candidate()
     {
         /*** arrange ***/
         $candidate = Candidate::factory()->create();

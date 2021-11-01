@@ -3,16 +3,28 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+    protected $toTruncate = ['poll_items', 'polls', 'stations', 'contacts', 'candidates'];
+
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Model::unguard();
+
+        Schema::disableForeignKeyConstraints();
+
+        foreach($this->toTruncate as $table) {
+            DB::table($table)->truncate();
+        }
+
+        Schema::enableForeignKeyConstraints();
+
+        $this->call(SimulationSeeder::class);
+
+        Model::reguard();
     }
 }

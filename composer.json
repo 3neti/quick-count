@@ -11,7 +11,8 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "lbhurtado/missive": "^2.1"
+        "lbhurtado/missive": "^2.1",
+        "lorisleiva/laravel-actions": "^2.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
