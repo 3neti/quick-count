@@ -12,7 +12,10 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "lbhurtado/missive": "^2.1",
-        "lorisleiva/laravel-actions": "^2.1"
+        "livewire/livewire": "^2.7",
+        "lorisleiva/laravel-actions": "^2.1",
+        "maatwebsite/excel": "^3.1",
+        "woenel/prpcmblmts": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -220,8 +220,8 @@ class SimulationSeeder extends Seeder
             $contact = Contact::create(compact('mobile'));
             AssociateStationAction::run($station, $contact);
             PollAction::run($contact, collect([
-                new CandidateVote($candidate1, random_int(random_int(0,25), random_int(26,100))),
-                new CandidateVote($candidate2, random_int(random_int(0,150), random_int(151,200))),
+                new CandidateVote($candidate1, random_int(random_int(0,150), random_int(151,200))),
+                new CandidateVote($candidate2, random_int(random_int(0,25), random_int(26,200))),
                 new CandidateVote($candidate3, random_int(random_int(0,100), random_int(101,200))),
                 new CandidateVote($candidate4, random_int(random_int(0,50), random_int(51,200))),
                 new CandidateVote($candidate5, random_int(random_int(0,25), random_int(26,200))),

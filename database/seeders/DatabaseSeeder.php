@@ -23,6 +23,11 @@ class DatabaseSeeder extends Seeder
 
         Schema::enableForeignKeyConstraints();
 
+//        $this->call(PhilippineRegionsTableSeeder::class);
+//        $this->call(PhilippineProvincesTableSeeder::class);
+//        $this->call(PhilippineCitiesTableSeeder::class);
+//        $this->call(PhilippineBarangaysTableSeeder::class);
+
         $this->call(SimulationSeeder::class);
 
         Model::reguard();

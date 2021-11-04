@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/import', \App\Http\Livewire\ImportStations::class);
+Route::get('/pair', \App\Http\Livewire\PairMobile::class);
+

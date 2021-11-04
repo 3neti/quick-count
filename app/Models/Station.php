@@ -19,4 +19,14 @@ class Station extends Model
         'region',
         'island'
     ];
+
+    public function barangay()
+    {
+        return $this->belongsTo(Barangay::class, 'barangay_code', 'barangay_code');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_municipality_code', 'city_municipality_code');
+    }
 }
